@@ -136,8 +136,8 @@ section{
 }
 
 .banner{
-    min-height: 80vh;
-    background:url(../images/banner.png) no-repeat;
+    min-height: 120vh;
+    background:url(../images/adiyogi.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     display: grid;
