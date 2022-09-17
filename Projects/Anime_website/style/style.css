@@ -1,15 +1,19 @@
+/* background color = #FFFAEB
+support color = #E9B949 */
+
 *{
+    align-items: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    background-color: #101015;
+    background-color: #FFFAEB;
 }
 
 header{
     height: 100px;
-    background: #20202e;
+    background: #E9B949;
     width: 100%;
     /* position: fixed; */
     z-index: 12;
@@ -19,6 +23,8 @@ header{
     font-size: 30px;
     padding: 50px;
     margin-left: 50px;
+    color: #E9B949;
+
 }
 
 .menu{
@@ -26,6 +32,7 @@ header{
     font-size: 20px;
     float: right;
     list-style: none;
+    color: #E9B949;
 }
 
 .menu li{
@@ -37,8 +44,8 @@ header{
 }
 
 .menu li a:hover{
-    background-color: #101015;
-    border: 1px solid #101015;
+    background-color: #E9B949;
+    border: 1px solid #E9B949;
     border-radius: 5px;
     border-width: auto;
 }
@@ -50,25 +57,25 @@ header{
 }
 
 .quote{
-    color: rgb(120, 92, 211);
+    color: black;
     font-size: 20px;
     font-style: bold;
 
 }
 
 .quote_of_the_day{
-    color: aliceblue;
+    color: black;
     font-size: 20px;
     text-align: center;
 }
 
 .episode{
-    color: rgb(38, 103, 159);
+    color: #E9B949;
     text-align: center;
 }
 
 .movie{
-    color: rgb(38, 103, 159);
+    color: #E9B949(38, 103, 159);
     text-align: center;
 }
 
@@ -82,7 +89,7 @@ img{
 
     width: 200px;
     height: 350px;
-    background-color: #20202e;
+    background-color: #E9B949;
     margin: 20px;
     float: left;
     border-radius: 15px;
@@ -97,7 +104,7 @@ img{
 
 .anime:hover{
     transform: scale(1.1);
-    box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px #E9B949;
 }
 
 .anime_info{
