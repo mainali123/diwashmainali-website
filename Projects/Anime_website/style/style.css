@@ -86,7 +86,6 @@ img{
 }
 
 .anime{
-
     width: 200px;
     height: 350px;
     background-color: #E9B949;
@@ -108,9 +107,14 @@ img{
 }
 
 .anime_info{
+    display: flex;
     position: absolute;
-    text-align: center;
+    align-items: center;
     font-size:medium ;
     color: white;
     padding-top: 140%;
+}
+
+.allanime{
+    padding-left: 2.4%;
 }
