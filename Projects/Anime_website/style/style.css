@@ -1,11 +1,13 @@
 /* background color = #FFFAEB
-support color = #E9B949 */
+support color = #E9B949 
+text = 372D4F*/
 
 *{
     align-items: center;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 body{
     background-color: #FFFAEB;
@@ -13,7 +15,8 @@ body{
 
 header{
     height: 100px;
-    background: #e9b94987;
+    color: #372D4F;
+    background: #A2B863;
     width: 100%;
     /* position: fixed; */
     z-index: 12;
@@ -23,7 +26,7 @@ header{
     font-size: 30px;
     padding: 50px;
     margin-left: 50px;
-    color: #E9B949;
+    color: #372D4F;
 
 }
 
@@ -44,8 +47,8 @@ header{
 }
 
 .menu li a:hover{
-    background-color: #E9B949;
-    border: 1px solid #E9B949;
+    background-color: #90b233;
+    border: 1px solid #a1b863;
     border-radius: 5px;
     border-width: auto;
 }
@@ -70,13 +73,9 @@ header{
 }
 
 .episode{
-    color: #E9B949;
+    color: #372D4F;
     text-align: center;
-}
-
-.movie{
-    color: #E9B949(38, 103, 159);
-    text-align: center;
+    font-size: 25px;
 }
 
 
@@ -88,7 +87,7 @@ img{
 .anime{
     width: 200px;
     height: 350px;
-    background-color: #e9b94955;
+    background-color: #a1b86363;
     margin: 20px;
     float: left;
     border-radius: 15px;
@@ -103,7 +102,7 @@ img{
 
 .anime:hover{
     transform: scale(1.1);
-    box-shadow: 0 0 10px #E9B949;
+    box-shadow: 0 0 20px #a1b86363;
 }
 
 .anime_info{
@@ -111,8 +110,8 @@ img{
     position: absolute;
     align-items: center;
     font-size:medium ;
-    color: rgb(48, 110, 198);
-    padding-top: 145%;
+    color: #372D4F;
+    padding-top: 135%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
