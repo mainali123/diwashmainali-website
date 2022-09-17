@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #101015;
+}
+
+header{
+    height: 100px;
+    background: #20202e;
+    width: 100%;
+    /* position: fixed; */
+    z-index: 12;
+}
+
+.logo{
+    font-size: 30px;
+    padding: 50px;
+    margin-left: 50px;
+}
+
+.menu{
+    font-family: "poppins";
+    font-size: 20px;
+    float: right;
+    list-style: none;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu li a{
+    padding: 15px;
+}
+
+.menu li a:hover{
+    background-color: #101015;
+    border: 1px solid #101015;
+    border-radius: 5px;
+    border-width: auto;
+}
+
+.anime_req{
+    text-align: center;
+    font-style: italic;
+
+}
+
+.quote{
+    color: rgb(120, 92, 211);
+    font-size: 20px;
+    font-style: bold;
+
+}
+
+.quote_of_the_day{
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center;
+}
+
+.episode{
+    color: rgb(38, 103, 159);
+    text-align: center;
+}
+
+.movie{
+    color: rgb(38, 103, 159);
+    text-align: center;
+}
+
+
+img{
+    width: 200px;
+    height: 280px;
+}
+
+.anime{
+
+    width: 200px;
+    height: 350px;
+    background-color: #20202e;
+    margin: 20px;
+    float: left;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+}
+.anime:focus{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.anime:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #fff;
+}
+
+.anime_info{
+    position: absolute;
+    text-align: center;
+    font-size: medium;
+    color: aliceblue;
+    padding-top: 140%;
+}
