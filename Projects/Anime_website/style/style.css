@@ -112,7 +112,11 @@ img{
     align-items: center;
     font-size:medium ;
     color: white;
-    padding-top: 140%;
+    padding-top: 145%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 .allanime{
