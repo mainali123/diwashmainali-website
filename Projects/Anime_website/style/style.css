@@ -13,7 +13,7 @@ body{
 
 header{
     height: 100px;
-    background: #E9B949;
+    background: #e9b94987;
     width: 100%;
     /* position: fixed; */
     z-index: 12;
@@ -88,7 +88,7 @@ img{
 .anime{
     width: 200px;
     height: 350px;
-    background-color: #E9B949;
+    background-color: #e9b94955;
     margin: 20px;
     float: left;
     border-radius: 15px;
@@ -111,7 +111,7 @@ img{
     position: absolute;
     align-items: center;
     font-size:medium ;
-    color: white;
+    color: rgb(48, 110, 198);
     padding-top: 145%;
     top: 50%;
     left: 50%;
