@@ -27,41 +27,50 @@ document
   .addEventListener("click", function () {
     let user_choice = parseInt(document.querySelector(".guess").value); // number guessed by user
 
-    if (user_choice === numToGuess) {
-      // if the number matches
-      document.querySelector(".message").textContent =
-        "Congratulations!! your answer is correct";
-      document.querySelector(".highscore").textContent = score;
-      document.querySelector(".number").textContent = numToGuess;
-      document.body.style.backgroundColor = "green";
-    } else if (numToGuess - user_choice <= 5 && numToGuess - user_choice > 0) {
-      document.querySelector(".message").textContent = "Close";
-      score--;
-      document.querySelector(".score").textContent = score;
-    } else if (numToGuess > user_choice) {
-      // If user have guessd lower number
-      if (numToGuess - user_choice <= 3) {
-        // If the number have difference of 3
+    if (score > 0) {
+      if (user_choice === numToGuess) {
+        // if the number matches
+        document.querySelector(".message").textContent =
+          "Congratulations!! your answer is correct";
+        document.querySelector(".highscore").textContent = score;
+        document.querySelector(".number").textContent = numToGuess;
+        document.body.style.backgroundColor = "green";
+      } else if (
+        numToGuess - user_choice <= 5 &&
+        numToGuess - user_choice > 0
+      ) {
         document.querySelector(".message").textContent = "Close";
         score--;
         document.querySelector(".score").textContent = score;
-      } else {
-        document.querySelector(".message").textContent = "Too Low";
-        score--;
-        document.querySelector(".score").textContent = score;
+      } else if (numToGuess > user_choice) {
+        // If user have guessd lower number
+        if (numToGuess - user_choice <= 3) {
+          // If the number have difference of 3
+          document.querySelector(".message").textContent = "Close";
+          score--;
+          document.querySelector(".score").textContent = score;
+        } else {
+          document.querySelector(".message").textContent = "Too Low";
+          score--;
+          document.querySelector(".score").textContent = score;
+        }
+      } else if (numToGuess < user_choice) {
+        // If user have guessd higher number
+        if (user_choice - numToGuess <= 3) {
+          // If the number have difference of 3
+          document.querySelector(".message").textContent = "Close";
+          score--;
+          document.querySelector(".score").textContent = score;
+        } else {
+          document.querySelector(".message").textContent = "Too High";
+          score--;
+          document.querySelector(".score").textContent = score;
+        }
       }
-    } else if (numToGuess < user_choice) {
-      // If user have guessd higher number
-      if (user_choice - numToGuess <= 3) {
-        // If the number have difference of 3
-        document.querySelector(".message").textContent = "Close";
-        score--;
-        document.querySelector(".score").textContent = score;
-      } else {
-        document.querySelector(".message").textContent = "Too High";
-        score--;
-        document.querySelector(".score").textContent = score;
-      }
+    } else {
+      document.querySelector(".message").textContent = "Game Over";
+      document.body.style.backgroundColor = "red";
+      document.querySelector(".number").textContent = "Lo\nst";
     }
   });
 
@@ -72,4 +81,5 @@ document.getElementById("restartGame").addEventListener("click", function () {
   document.querySelector(".number").textContent = initialBigNumberToGuess;
   document.querySelector(".guess").value = "";
   document.querySelector(".score").textContent = 20;
+  score = 20;
 });
