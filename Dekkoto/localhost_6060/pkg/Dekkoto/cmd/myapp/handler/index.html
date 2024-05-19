@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from localhost:6060/pkg/Dekkoto/cmd/myapp/handler/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 May 2024 04:14:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>handler - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.21.0";</script>
+<script src="../../../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:6060/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:6060/pkg/">GoDoc</a></div>
+<a href="#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:6060/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package handler
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "Dekkoto/cmd/myapp/handler"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>Package handler provides various handlers for handling user requests in the application.
+These handlers are responsible for processing incoming HTTP requests related to video management,
+such as uploading videos, thumbnails, and banners, as well as handling video details.
+The package includes functions for reading files from requests, handling file uploads,
+encoding videos, resizing images, and interacting with the database.
+It also includes functions for sending notifications to the user and redirecting the user to different pages.
+This package is essential for the functionality of the video management system in the application.
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+				<dd><a href="#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="#HandleBannerUpload">func HandleBannerUpload(c *gin.Context, bannerFile *multipart.FileHeader) (string, error)</a></dd>
+			
+				
+				<dd><a href="#HandleThumbnailUpload">func HandleThumbnailUpload(c *gin.Context, thumbnailFile *multipart.FileHeader) (string, error)</a></dd>
+			
+				
+				<dd><a href="#HandleVideoUpload">func HandleVideoUpload(c *gin.Context, videoFile *multipart.FileHeader) (string, error)</a></dd>
+			
+				
+				<dd><a href="#MainUpload">func MainUpload(c *gin.Context)</a></dd>
+			
+				
+				<dd><a href="#VideoDetails">func VideoDetails(c *gin.Context, title string, description string, category string, genresCSV string) (string, error)</a></dd>
+			
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:6060/src/Dekkoto/cmd/myapp/handler/bannerUploadHandler.go">bannerUploadHandler.go</a>
+			
+				<a href="http://localhost:6060/src/Dekkoto/cmd/myapp/handler/mainUploadHandler.go">mainUploadHandler.go</a>
+			
+				<a href="http://localhost:6060/src/Dekkoto/cmd/myapp/handler/thumbnailUploadHandler.go">thumbnailUploadHandler.go</a>
+			
+				<a href="http://localhost:6060/src/Dekkoto/cmd/myapp/handler/videoDetailsHandler.go">videoDetailsHandler.go</a>
+			
+				<a href="http://localhost:6060/src/Dekkoto/cmd/myapp/handler/videoUploadHandler.go">videoUploadHandler.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				<p>GfileName is a global variable that stores the name of the uploaded file.
+
+				<pre>var <span id="GfileName">GfileName</span> <a href="http://localhost:6060/pkg/builtin/#string">string</a></pre>
+			
+				<p>VideoDetailsInfo is a global variable of type videoDetails that stores the details of the uploaded video.
+
+				<pre>var <span id="VideoDetailsInfo">VideoDetailsInfo</span> videoDetails</pre>
+			
+		
+		
+			
+			
+			<h2 id="HandleBannerUpload">func <a href="http://localhost:6060/src/Dekkoto/cmd/myapp/handler/bannerUploadHandler.go?s=1902:1991#L30">HandleBannerUpload</a>
+				<a class="permalink" href="#HandleBannerUpload">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func HandleBannerUpload(c *<a href="http://localhost:6060/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="http://localhost:6060/pkg/github.com/gin-gonic/gin/#Context">Context</a>, bannerFile *<a href="http://localhost:6060/pkg/mime/multipart/">multipart</a>.<a href="http://localhost:6060/pkg/mime/multipart/#FileHeader">FileHeader</a>) (<a href="http://localhost:6060/pkg/builtin/#string">string</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>HandleBannerUpload is a function that handles the banner upload process.
+It performs the following steps:
+1. Reads the banner file from the request.
+2. Decodes the image file.
+3. Resizes the image to 1920x1080, maintaining the aspect ratio of 16:9.
+4. Compresses and saves the banner as a PNG file in the local directory.
+5. Encodes the image to JPEG format with a quality set to 80.
+6. Provides the storage path of the banner.
+<p>If there is an error at any step, it sends an appropriate error response.
+<p>The aspect ratio of the banner should be 16:9.
+The function uses the Lanczos3 resampling function from the &quot;github.com/nfnt/resize&quot; package for resizing the image.
+The function uses the &quot;image/jpeg&quot; package for encoding the image to JPEG format.
+The function saves the banner in the &quot;./userUploadDatas/banners/&quot; directory.
+The function provides the storage path of the banner in the bannerStoragePath variable.
+<p>The function expects a &quot;banner&quot; file in the request. If the file is not present, it sends a 500 error response with the message &quot;Failed to read file from request&quot;.
+If the function fails to decode the image file, it sends a 500 error response with the message &quot;Failed to decode image file&quot;.
+If the function fails to create the file, it sends a 500 error response with the message &quot;Failed to create file&quot;.
+If the function fails to encode the image to JPEG, it sends a 500 error response with the message &quot;Failed to encode image to JPEG&quot;.
+If the function successfully uploads and converts the file, it sends a 200 response with the message &quot;File uploaded and converted to 1920x1080 successfully. Banner storage path: &quot;+bannerStoragePath&quot;.
+
+			
+			
+
+		
+			
+			
+			<h2 id="HandleThumbnailUpload">func <a href="http://localhost:6060/src/Dekkoto/cmd/myapp/handler/thumbnailUploadHandler.go?s=1941:2036#L32">HandleThumbnailUpload</a>
+				<a class="permalink" href="#HandleThumbnailUpload">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func HandleThumbnailUpload(c *<a href="http://localhost:6060/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="http://localhost:6060/pkg/github.com/gin-gonic/gin/#Context">Context</a>, thumbnailFile *<a href="http://localhost:6060/pkg/mime/multipart/">multipart</a>.<a href="http://localhost:6060/pkg/mime/multipart/#FileHeader">FileHeader</a>) (<a href="http://localhost:6060/pkg/builtin/#string">string</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>HandleThumbnailUpload is a function that handles the thumbnail upload process.
+It performs the following steps:
+1. Reads the thumbnail file from the request.
+2. Decodes the image file.
+3. Resizes the image to 1080x1920, maintaining the aspect ratio of 16:9.
+4. Compresses and saves the thumbnail as a PNG file in the local directory.
+5. Encodes the image to JPEG format with a quality set to 80.
+6. Provides the storage path of the thumbnail.
+<p>If there is an error at any step, it sends an appropriate error response.
+<p>The aspect ratio of the thumbnail should be 16:9.
+The function uses the Lanczos3 resampling function from the &quot;github.com/nfnt/resize&quot; package for resizing the image.
+The function uses the &quot;image/jpeg&quot; package for encoding the image to JPEG format.
+The function saves the thumbnail in the &quot;./userUploadDatas/thumbnails/&quot; directory.
+The function provides the storage path of the thumbnail in the VideoDetailsInfo.ThumbnailStoragePath variable.
+<p>The function expects a &quot;thumbnail&quot; file in the request. If the file is not present, it sends a 500 error response with the message &quot;Failed to read file from request&quot;.
+If the function fails to decode the image file, it sends a 500 error response with the message &quot;Failed to decode image file&quot;.
+If the function fails to create the file, it sends a 500 error response with the message &quot;Failed to create file&quot;.
+If the function fails to encode the image to JPEG, it sends a 500 error response with the message &quot;Failed to encode image to JPEG&quot;.
+If the function successfully uploads and converts the file, it sends a 200 response with the message &quot;File uploaded and converted to 1080x1920 successfully&quot;..
+
+			
+			
+
+		
+			
+			
+			<h2 id="HandleVideoUpload">func <a href="http://localhost:6060/src/Dekkoto/cmd/myapp/handler/videoUploadHandler.go?s=2765:2852#L44">HandleVideoUpload</a>
+				<a class="permalink" href="#HandleVideoUpload">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func HandleVideoUpload(c *<a href="http://localhost:6060/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="http://localhost:6060/pkg/github.com/gin-gonic/gin/#Context">Context</a>, videoFile *<a href="http://localhost:6060/pkg/mime/multipart/">multipart</a>.<a href="http://localhost:6060/pkg/mime/multipart/#FileHeader">FileHeader</a>) (<a href="http://localhost:6060/pkg/builtin/#string">string</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>HandleVideoUpload handles the video upload process. It reads the video file from the request,
+saves it to a local directory, gets the video&apos;s duration and quality, encodes the video to H.265 format,
+and deletes the old file.
+<p>The function expects a &quot;video&quot; file in the request. If the file is not present, it sends a 500 error response with the message &quot;Failed to read file from request&quot;.
+If the function fails to create the file, it sends a 500 error response with the message &quot;Failed to create file&quot;.
+If the function fails to save the file, it sends a 500 error response with the message &quot;Failed to save file&quot;.
+If the function fails to get the video info, it sends a 500 error response with the message &quot;Failed to get video info&quot;.
+If the function fails to convert the video, it sends a 500 error response with the message &quot;Failed to convert video&quot;.
+If the function fails to stop using the old file, it sends a 500 error response with the message &quot;Failed to stop using the old file&quot;.
+If the function fails to delete the old file, it sends a 500 error response with the message &quot;Failed to delete old file&quot;.
+If the function successfully uploads, converts, and deletes the old file, it sends a 200 response with the message &quot;File uploaded, converted to H.265, and old file deleted successfully&quot;.
+<p>The function uses the &quot;os&quot;, &quot;io&quot;, &quot;os/exec&quot;, &quot;strconv&quot;, &quot;math/rand&quot;, &quot;time&quot;, &quot;net/http&quot;, &quot;fmt&quot;, &quot;github.com/gin-gonic/gin&quot;, and &quot;github.com/google/uuid&quot; packages.
+The function saves the video in the &quot;./userUploadDatas/videos/&quot; directory.
+The function provides the storage path of the video in the VideoDetailsInfo.VideoStoragePath variable.
+The function provides the duration of the video in the VideoDetailsInfo.VideoDuration variable.
+
+			
+			
+
+		
+			
+			
+			<h2 id="MainUpload">func <a href="http://localhost:6060/src/Dekkoto/cmd/myapp/handler/mainUploadHandler.go?s=1425:1456#L18">MainUpload</a>
+				<a class="permalink" href="#MainUpload">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func MainUpload(c *<a href="http://localhost:6060/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="http://localhost:6060/pkg/github.com/gin-gonic/gin/#Context">Context</a>)</pre>
+			<p>MainUpload is the Main handler function that handles the video upload process.
+It performs the following steps:
+1. Reads the video, thumbnail, and banner files from the request.
+2. Calls the HandleVideoUpload, HandleThumbnailUpload, and HandleBannerUpload functions to handle the upload of the video, thumbnail, and banner respectively.
+3. Reads the video details from the request.
+4. Calls the VideoDetails function to handle the video details.
+5. Calls the uploadOnDatabase function to upload the video to the database.
+6. Redirects the user to the admin panel.
+<p>If there is an error at any step, it sends an appropriate error response.
+
+			
+			
+
+		
+			
+			
+			<h2 id="VideoDetails">func <a href="http://localhost:6060/src/Dekkoto/cmd/myapp/handler/videoDetailsHandler.go?s=125:243#L1">VideoDetails</a>
+				<a class="permalink" href="#VideoDetails">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func VideoDetails(c *<a href="http://localhost:6060/pkg/github.com/gin-gonic/gin/">gin</a>.<a href="http://localhost:6060/pkg/github.com/gin-gonic/gin/#Context">Context</a>, title <a href="http://localhost:6060/pkg/builtin/#string">string</a>, description <a href="http://localhost:6060/pkg/builtin/#string">string</a>, category <a href="http://localhost:6060/pkg/builtin/#string">string</a>, genresCSV <a href="http://localhost:6060/pkg/builtin/#string">string</a>) (<a href="http://localhost:6060/pkg/builtin/#string">string</a>, <a href="http://localhost:6060/pkg/builtin/#error">error</a>)</pre>
+			<p>Modify VideoDetails to accept video details as parameters
+
+			
+			
+
+		
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.21.0.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:6060/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+
+<!-- Mirrored from localhost:6060/pkg/Dekkoto/cmd/myapp/handler/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 19 May 2024 04:14:49 GMT -->
+</html>
